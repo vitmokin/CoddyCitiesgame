@@ -11,6 +11,17 @@ while dlina1 == dlina2:
     dlina1 = igrok1[-1]
     igrok2 = str(input('Введите название города'))
     dlina2 = igrok2[0]
+    for i in answer_list:
+        if i == igrok1:
+            print('obnaruzheno povtorenie')
+        else:
+            print('далее')
+    for i in answer_list:
+        if i == igrok2:
+            print('obnaruzheno povtorenie')
+        else:
+            print('далее')
+
 else:
     print('none')
 # proverka povtoreniy
