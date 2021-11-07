@@ -40,6 +40,4 @@ while True:
         print("первая буква этого слова и последняя буква прошлого слова не совподают")
         bad_trigh=bad_trigh+1
 temp=0
-bad_trigh=0
-
-a=1    
+bad_trigh=0    
