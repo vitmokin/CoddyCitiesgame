@@ -2,12 +2,12 @@
 import time
 
 
-def Таймер():
-    T = 30
-    while T > 0:
-        T -= 10
-        time.sleep(10)
-        print('осталось {} секунд'.format(T))
+def timer():
+    f=time.time()+20
+    temp=int((f-(f-20))//1)
+    while time.time()<f:
+        if temp-temp//4==int((f-time.time())//1) or temp//2==int((f-time.time())//1) or temp//4==int((f-time.time())//1):
+                print('Осталось {} секунд'.format(int((f-time.time())//1)))
     print('ты проиграл')
 
 
@@ -26,7 +26,7 @@ def game():
         last_letter = a[len(a)-1]
 
 
-print(game())
+timer()
 
 # Комментарии по деталям кода:
 # 
