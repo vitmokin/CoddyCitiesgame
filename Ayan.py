@@ -1,13 +1,13 @@
 # file for Ayan
 ##print("Hello, Ayan")
 def simple_game(igrok1,igrok2,dlina1,dlina2,answer_list):
-    igrok1 = str(input('Введите название города'))
+    igrok1 =input('Введите название города'))
     dlina1 = igrok1[-1]
-    igrok2 = str(input('Введите название города'))
+    igrok2 =input('Введите название города'))
     dlina2 = igrok2[0]
     answer_list = [igrok1, igrok2]
     return answer_list
-def chto_to__vazhnoe(igrok1,igrok2,dlina1,dlina2,answer_list):
+def chto_to__strannoe(dlina1,answer_list):#это только визуализация главной мысли
     a ='а'
     A ='А'
     for i in answer_list:
@@ -15,24 +15,25 @@ def chto_to__vazhnoe(igrok1,igrok2,dlina1,dlina2,answer_list):
             dlina1 == А
         else:
             print('none')
+    return answer_list
 def proverka(igrok1,dlina1,dlina2,answer_list):
     while dlina1 == dlina2:
         print('далее')
-        igrok1 = str(input('Введите название города'))
+        igrok1 = input('Введите название города'))
         dlina1 = igrok1[-1]
         for i in answer_list:
             if i == igrok1:
                 print('obnaruzheno povtorenie')
             else:
                 print('далее')
-        igrok2 = str(input('Введите название города'))
+        igrok2 = input('Введите название города'))
         dlina2 = igrok2[0]
         for i in answer_list:
             if i == igrok2:
                 print('obnaruzheno povtorenie')
             else:
                 print('далее')
-        return proverka
+        return answer_list
 # Строки 22-26 почти полностью дублируют строки 17-21
 # Я рассказывал, что надо использовать в таких случаях, 
 # когда у нас есть повторяющихся функций (не Ctrl+C)
