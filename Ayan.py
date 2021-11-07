@@ -7,7 +7,15 @@ def simple_game(igrok1,igrok2,dlina1,dlina2,answer_list):
     dlina2 = igrok2[0]
     answer_list = [igrok1, igrok2]
     return answer_list
-def proverka (igrok1,igrok2,dlina1,dlina2,answer_list):
+def chto_to__vazhnoe(igrok1,igrok2,dlina1,dlina2,answer_list):
+    a ='а'
+    A ='А'
+    for i in answer_list:
+        if dlina1 == a:
+            dlina1 == А
+        else:
+            print('none')
+def proverka(igrok1,dlina1,dlina2,answer_list):
     while dlina1 == dlina2:
         print('далее')
         igrok1 = str(input('Введите название города'))
@@ -25,10 +33,6 @@ def proverka (igrok1,igrok2,dlina1,dlina2,answer_list):
             else:
                 print('далее')
         return proverka
-# Комментарии по деталям кода:
-# 
-# Почему нет функций?
-# Проверка for должна быть внутри while, а не после него
 # Строки 22-26 почти полностью дублируют строки 17-21
 # Я рассказывал, что надо использовать в таких случаях, 
 # когда у нас есть повторяющихся функций (не Ctrl+C)
