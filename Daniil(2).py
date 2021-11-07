@@ -41,4 +41,5 @@ while True:
         bad_trigh=bad_trigh+1
 temp=0
 bad_trigh=0
-    
+
+a=1    
