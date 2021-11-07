@@ -10,7 +10,7 @@ trigh_max = int(input("Введите количество ходов котор
 trigh_max = trigh_max*2
 if trigh_max > len(cities_list):
     print("слишком много попыток,нет столько городов")
-    SystemError
+    exit()
 while True:
     temp = str(input("первый игрок введите название города"))
     lastletter = temp[-1]
@@ -55,7 +55,7 @@ def firstpersonpain(temp, cities_list, city_play_lista, victorypoint1, lastlette
             city_play_lista.pop(0)
         print("уже было")
         trigh = trigh+1
-        elif lastletter == firstletter:
+        if lastletter == firstletter:
             trigh = trigh+1
             victorypoint1 = victorypoint1+1
             lastletter = firstletter
@@ -83,7 +83,7 @@ def secondpersonpain(temp, cities_list, city_play_lista, victorypoint2, lastlett
             city_play_lista.pop(0)
         print("уже было")
         trigh = trigh+1
-        elif lastletter == firstletter:
+        if lastletter == firstletter:
             trigh = trigh+1
             victorypoint2 = victorypoint2+1
             lastletter = firstletter
