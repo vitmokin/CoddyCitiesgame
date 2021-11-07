@@ -12,22 +12,45 @@ def timer():
 
 
 def game():
+    a=0
     while True:
-        a = input('Город - ')
-        last_letter = a[len(a)-1]
-        a = input('Напишите город ')
-        # что-то придумаю
-        if last_letter.upper() == a[0]:
-            pass
-        else:
-            print(
-                'Буква, на которую оканчивается прошлый город не совпадает с первой буквой нового города')
-            pass
-        last_letter = a[len(a)-1]
+        p1=input('Напишите горот ')
+        last_letter1=p1[len(p1)-1]
+        a+=1
+        if a>1 and a%2!=0:
+            if last_letter2.upper() == p1[0]:
+                pass
+            else:
+                print('Буква, на которую оканчивается прошлый город не совпадает с первой буквой нового города')
+                while last_letter2.upper() != p1[0]:
+                    if last_letter2.upper() != p1[0]:
+                        p1=input('Напишите горот ')
+                        if last_letter2.upper() != p1[0]:
+                            print('Буква, на которую оканчивается прошлый город не совпадает с первой буквой нового города')
+                    else:
+                        break
+                pass
+        last_letter1=p1[len(p1)-1]
+        p2=input('Напишите город ')
+        a+=1
+        last_letter2=p2[len(p2)-1]
+        if a%2==0:
+            if last_letter1.upper() == p2[0]:
+                pass
+            else:
+                print('Буква, на которую оканчивается прошлый город не совпадает с первой буквой нового города')
+                while last_letter1.upper() != p2[0]:
+                    if last_letter1.upper() != p2[0]:
+                        p2=input('Напишите город ')
+                        if last_letter1.upper() != p2[0]:
+                            print('Буква, на которую оканчивается прошлый город не совпадает с первой буквой нового города')
+                    else:
+                        break
+                pass
+        last_letter2=p2[len(p2)-1]
+            
 
-
-timer()
-
+game()
 # Комментарии по деталям кода:
 # 
 # Название функции на русском языке - это грубая ошибка
