@@ -1,12 +1,12 @@
 cities_list = ["Москва", "Кострома", "Сочи", "Челябинск"]
 city_play_lista = []
-bad_trigh=0
-lastletter=input("Введите начальную букву(не с заглавной)")
-temp=0
+bad_trigh = 0
+lastletter = input("Введите начальную букву(не с заглавной)")
+temp = 0
 while True:
-    if bad_trigh==2:
+    if bad_trigh == 2:
         exit()
-    temp =(input("Следующий игрок введите название города"))
+    temp = (input("Следующий игрок введите название города"))
     firstletter = temp[0]
     firstletter = firstletter.lower()
     cities_list.insert(0, temp)
@@ -21,15 +21,12 @@ while True:
     if check2 != 1:
         city_play_lista.pop(0)
         print("уже было")
-        bad_trigh=bad_trigh+1
+        bad_trigh = bad_trigh+1
     if lastletter == firstletter:
         lastletter = firstletter
         break
     else:
         print("первая буква этого слова и последняя буква прошлого слова не совподают")
-        bad_trigh=bad_trigh+1
-temp=0
-bad_trigh=0
-
-        
-
+        bad_trigh = bad_trigh+1
+temp = 0
+bad_trigh = 0
