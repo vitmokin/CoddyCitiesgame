@@ -1,3 +1,4 @@
+counter=0
 cities_list = ["Москва", "Кострома", "Сочи", "Челябинск"]
 city_play_lista = []
 bad_attempt = 0
@@ -5,7 +6,7 @@ lastletter = input("Введите начальную букву (не с заг
 temp = 0
 while True:
     if bad_attempt == 2:
-        exit()
+        break
     temp = (input("Следующий игрок, введите название города"))
     firstletter = temp[0]
     firstletter = firstletter.lower()
@@ -15,40 +16,29 @@ while True:
         cities_list.pop(0)
         city_play_lista.insert(0, temp)
         check2 = city_play_lista.count(temp)
+        if check2 = 1:
+            pass
+            if lastletter == firstletter:
+                lastletter = firstletter
+                counter=counter+1
+            else:
+                print("первая буква этого слова и последняя буква прошлого слова не совпадают")
+                bad_attempt = bad_attempt+1
+        else:
+              city_play_lista.pop(0)
+       print("уже было")
+       bad_attempt = bad_attempt+1
     else:
         cities_list.pop(0)
         print("такого города нет (попробуйте начать с заглавной буквы)")
-    if check2 != 1:
-        city_play_lista.pop(0)
-        print("уже было")
         bad_attempt = bad_attempt+1
-    if lastletter == firstletter:
-        lastletter = firstletter
-        break
-    else:
-        print("первая буква этого слова и последняя буква прошлого слова не совпадают")
-        bad_attempt = bad_attempt+1
-temp = 0
-bad_attempt = 0
+    temp = 0
+if counter%2=0
+    print("первый игрок проиграл !")
+else:
+    print("второй игрок проиграл!")
+    
 
-# Комментарии от 09.11
-# 
-# Даня, где функции???
-# Я очень рад, что код стал короче, но что с функциями?
-# Почему ты их не любишь, Даня? Как так?
-# Давай привыкать к функциям, серьёзно
-# Это просто и это удобно
-# Почитай конспект, почитай старый код с функциями и полюби их наконец
-# 
-# Давай не бояться пользоваться переводчиком
-# Чтобы перевод попытку как try, а не как trigh
-# Я переименую её в attempt, поскольку try в Python - встроенная команда
-# 
-# exit() останавливает весть код, а из while True мы ввыходим иначе
-# Хотя в твоём коде можно вообще без while True обойтись
-# (не с заглавной) в 4 строке - это неправильная логика, ты должен подстаиваться под игрока,
-# а не наоборот. Он вводит как ему удобно, а ты готов к любым его вводам 
-# Саму логику не проверяю, пока ты не скажешь, что прошло все твои тесты
-# Выглядит достаточно сложно и ты опять (возможно!!!) злоупотребляешь методами списков
-# 
-# Общее впечатление - весьма вероятно, что почти работает, но весьма вероятно, что можно значительно упростить
+
+
+
