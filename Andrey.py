@@ -1,16 +1,19 @@
 # file for Andrey
 import time
 
-
 def timer():
     f = time.time()+20
     temp = int((f-(f-20))//1)
     while time.time() < f:
+        print('re')
         if temp-temp//4 == int((f-time.time())//1) or temp//2 == int((f-time.time())//1) or temp//4 == int((f-time.time())//1):
+            print('re')
             print('Осталось {} секунд'.format(int((f-time.time())//1)))
         else:
             break
         print('ты проиграл')
+
+timer()
 
 def oda(a,b):
     txt='Буква, на которую оканчивается прошлый город не совпадает с первой буквой нового города'
@@ -21,35 +24,30 @@ def oda(a,b):
             if a.upper() != b[0]:
                 print(txt)
 
-
-def pro(last_letter1,last_letter2,p1,p2):
-    if last_letter1=='ь' or last_letter1=='ъ':
-        last_letter1=p1[len(p1)-2]
-    if last_letter2=='ь' or last_letter2=='ъ':
-        last_letter2=p2[len(p2)-2]
-
-
-
 def game():
     a = 0
     while True:
         p1 = input('Напишите горот ')
-        last_letter1 = p1[len(p1)-1]
+        last_letter1 = p1[-1]
+        if last_letter1=='ь':
+            last_letter1=p1[-2]
         a += 1
         if a > 1 and a % 2 != 0:
             oda(last_letter2,p1)
-        last_letter1 = p1[len(p1)-1]
+        last_letter1 = p1[-1]
+        if last_letter1=='ь':
+            last_letter1=p1[-2]
         p2 = input('Напишите город ')
         a += 1
-        last_letter2 = p2[len(p2)-1]
+        last_letter2 = p2[-1]
+        if last_letter2=='ь':
+            last_letter2=p2[-2]
         if a % 2 == 0:
             oda(last_letter1,p2)
-        last_letter2 = p2[len(p2)-1]
+        last_letter2 = p2[-1]
+        if last_letter2=='ь':
+            last_letter2=p2[-2]
 
-
-
-
-game()
 
 # Основной код предварительно(!) работает, классно
 # Разберись с таймером и проверь, что введённого игроком города раньше не было
