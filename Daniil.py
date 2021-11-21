@@ -8,7 +8,7 @@ def game(counter,cities_list ,city_play_lista,bad_attempt,temp):
             temp=0
             if bad_attempt == 2:
                 break
-            temp = (input("Следующий игрок, введите название города"))
+            temp = (input("Игрок, введите название города"))
             firstletter = temp[0]
             cities_list.insert(0, temp)
             check = cities_list.count(temp)
