@@ -34,8 +34,7 @@ def proverka(igrok1, dlina1, dlina2, answer_list):
                 print('далее')
         return answer_list
         print(proverka(igrok1, dlina1, dlina2, answer_list))
-# В simple_game() есть строки, которые не используются
-# uvelichenie_bukvi - минимум(!) 3 ошибки
+
 # Логику не проверял, пока ты не доделала
     
 #####################################################
