@@ -5,13 +5,9 @@ def timer():
     f = time.time()+20
     temp = int((f-(f-20))//1)
     while time.time() < f:
-        print('re')
-        if temp-temp//4 == int((f-time.time())//1) or temp//2 == int((f-time.time())//1) or temp//4 == int((f-time.time())//1):
-            print('re')
-            print('Осталось {} секунд'.format(int((f-time.time())//1)))
-        else:
-            break
-        print('ты проиграл')
+        #if temp-temp//4 == int((f-time.time())//1) or temp//2 == int((f-time.time())//1) or temp//4 == int((f-time.time())//1):
+        print('Осталось {} секунд'.format(int((f-time.time())//1)))
+    print('ты проиграл')
 
 timer()
 
