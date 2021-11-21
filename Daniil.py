@@ -1,25 +1,8 @@
-counter=0
-print("включите русскую раскладку")
-cities_list = ["Москва", "Кострома", "Сочи", "Челябинск","Иркутск","Смоленск",]
-city_play_lista = []
-bad_attempt = 0
-temp = 0
-start()
-game(counter,cities_list ,city_play_lista,bad_attempt,temp)
-if counter%2==0:
-    print("первый игрок проиграл !")
-else:
-    print("второй игрок проиграл!")
-    
-
-
-
-
-
 def start():
     lastletter = input("Введите начальную букву ")
     if lastletter.lower():
         lastletter=lastletter.upper()
+    return(lastletter):
 def game(counter,cities_list ,city_play_lista,bad_attempt,temp):
         while True:
             temp=0
@@ -51,9 +34,18 @@ def game(counter,cities_list ,city_play_lista,bad_attempt,temp):
                 cities_list.pop(0)
                 print("такого города нет (попробуйте начать с заглавной буквы)")
                 bad_attempt = bad_attempt+1
+        return(counter):          
 
+counter=0
+print("включите русскую раскладку")
+cities_list = ["Москва", "Кострома", "Сочи", "Челябинск","Иркутск","Смоленск",]
+city_play_lista = []
+bad_attempt = 0
+temp = 0
+start()
+game(counter,cities_list ,city_play_lista,bad_attempt,temp)
+if counter%2==0:
+    print("первый игрок проиграл !")
+else:
+    print("второй игрок проиграл!")
 
-# Используем функции после того, как их написали, не наоборот
-# Если хочешь использовать counter, его надо возвращать из функции
-# Из функций надо возвращать значения
-# Очень много методов, подумай, везде ли они уместны (я не знаю, возможно, что везде, думай сам) 
