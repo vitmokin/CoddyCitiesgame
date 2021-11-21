@@ -17,7 +17,7 @@ timer()
 
 def oda(a,b):
     txt='Буква, на которую оканчивается прошлый город не совпадает с первой буквой нового города'
-    if a.upper() != b[0]:
+    if a.upper() != b[0].upper():
         print(txt)
         while a.upper() != b[0]:
             b = input('Напишите город ')
@@ -47,6 +47,7 @@ def game():
         last_letter2 = p2[-1]
         if last_letter2=='ь':
             last_letter2=p2[-2]
+game()
 
 
 # Основной код предварительно(!) работает, классно
