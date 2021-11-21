@@ -2,7 +2,7 @@ def start():
     lastletter = input("Введите начальную букву ")
     if lastletter.lower():
         lastletter=lastletter.upper()
-    return(lastletter):
+    return(lastletter)
 def game(counter,cities_list ,city_play_lista,bad_attempt,temp):
         while True:
             temp=0
@@ -34,7 +34,7 @@ def game(counter,cities_list ,city_play_lista,bad_attempt,temp):
                 cities_list.pop(0)
                 print("такого города нет (попробуйте начать с заглавной буквы)")
                 bad_attempt = bad_attempt+1
-        return(counter):          
+        return(counter)        
 
 counter=0
 print("включите русскую раскладку")
