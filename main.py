@@ -1,5 +1,6 @@
 from time import perf_counter
 
+
 def timer():
     now = perf_counter()
     flag20 = True
@@ -13,5 +14,6 @@ def timer():
             flag10 = False
     print('Вы проиграли')
     exit()
+
 
 timer()
