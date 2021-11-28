@@ -1,14 +1,24 @@
-def start():
-    lastletter = input("Введите начальную букву ")
-    if lastletter.lower():
-        lastletter=lastletter.upper()
-    return(lastletter)
-def game(counter,cities_list ,city_play_lista,bad_attempt,temp):
+def start(lastletter,firstletter):
+    counter=0
+    while True:
+        temp = (input("Первый игрок, введите название города"))
+        check = cities_list.count(temp)
+        if check ==1 :
+            break
+        else:
+            print("такого города нет (попробуйте начать с заглавной буквы)")
+    cities_list.pop(0)
+    city_play_lista.insert(0, temp)
+    lastletter = temp[-1]
+    lastletter.upper()
+    counter=counter+1
+    return(counter,lastletter)
+def game(counter,cities_list ,city_play_lista,bad_attempt,temp,lastletter,firstletter):
         while True:
             temp=0
             if bad_attempt == 2:
                 break
-            temp = (input("Игрок, введите название города"))
+            temp = (input("Следующий, введите название города"))
             firstletter = temp[0]
             cities_list.insert(0, temp)
             check = cities_list.count(temp)
@@ -40,12 +50,13 @@ counter=0
 print("включите русскую раскладку")
 cities_list = ["Москва", "Кострома", "Сочи", "Челябинск","Иркутск","Смоленск",]
 city_play_lista = []
+lastletter=0
+firstletter=0
 bad_attempt = 0
 temp = 0
-start()
-game(counter,cities_list ,city_play_lista,bad_attempt,temp)
+start(lastletter,firstletter)
+game(counter,cities_list ,city_play_lista,bad_attempt,temp,lastletter,firstletter)
 if counter%2==0:
     print("первый игрок проиграл !")
 else:
     print("второй игрок проиграл!")
-
