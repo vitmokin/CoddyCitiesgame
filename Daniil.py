@@ -1,7 +1,7 @@
 def start(lastletter, firstletter,counter):
     counter=0
     while True:
-        temp = (input("Первый игрок, введите название города"))
+        temp = (input("Первый игрок, введите название города: "))
         check = cities_list.count(temp)
         #смотрим существует ли город
         if check == 1:
@@ -25,10 +25,10 @@ def game(counter, cities_list, city_play_lista,lastletter, firstletter):
         if bad_attemp == 2:
             break
         #проверка на проигрышь
-        temp = (input("Следующий, введите название города"))
+        temp = (input("Следующий, введите название города: "))
         firstletter = temp[0]
         check = cities_list.count(temp)
-        if check != 1:
+        if check == 1:
             cities_list.pop(0)
             city_play_lista.insert(0, temp)
             check2 = city_play_lista.count(temp)
@@ -58,7 +58,7 @@ def game(counter, cities_list, city_play_lista,lastletter, firstletter):
 
 counter=0
 print("включите русскую раскладку")
-cities_list = ["Москва", "Кострома", "Сочи","Челябинск", "Иркутск", "Смоленск", ]
+cities_list = ["Москва", "Кострома", "Сочи","Челябинск","Иркутск", "Смоленск"]
 city_play_lista = []
 lastletter = ""
 firstletter = ""
