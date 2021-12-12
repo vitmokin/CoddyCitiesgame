@@ -11,12 +11,11 @@ def start(lastletter):
     city_play_lista.insert(0, temp)
     #чтобы не было повторов
     lastletter = temp[-1]
-    lastletter.upper()
+    lastletter.capitalize()
     #задаем последнюю букву
-    return(lastletter)
 
 
-def game(cities_list, city_play_lista,lastletter, firstletter):
+def game(cities_list, city_play_lista,firstletter,lastletter):
     bad_attemp=0
     counter=1
     while True:
@@ -36,7 +35,7 @@ def game(cities_list, city_play_lista,lastletter, firstletter):
                 #проверка 2 на повторение города
                 if lastletter == firstletter:
                     lastletter = temp[-1]
-                    lastletter.upper()
+                    lastletter.capitalize()
                     counter = counter+1
                     #проверка 3 на последнюю букву
                 else:
@@ -61,7 +60,7 @@ city_play_lista = []
 lastletter = ""
 firstletter = ""
 #вводим переменные и списки
-start(lastletter)
+lastletter=start(lastletter)
 #определяем стартовое слово
 counter=game( cities_list, city_play_lista,lastletter,firstletter)
 if counter % 2 == 0:
