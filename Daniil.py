@@ -1,4 +1,4 @@
-def start(lastletter, firstletter):
+def start(lastletter):
     while True:
         temp = (input("Первый игрок, введите название города: "))
         check = cities_list.count(temp)
@@ -61,9 +61,9 @@ city_play_lista = []
 lastletter = ""
 firstletter = ""
 #вводим переменные и списки
-start(lastletter, firstletter,counter)
+start(lastletter)
 #определяем стартовое слово
-game(counter, cities_list, city_play_lista,lastletter,firstletter)
+game( cities_list, city_play_lista,lastletter,firstletter)
 if counter % 2 == 0:
     print("первый игрок проиграл !")
 else:
