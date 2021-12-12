@@ -14,20 +14,24 @@ def timer():
     c=1
 
 
-def oda(a, b):#a-last_letter(x) in future, b-p(x) in future
+def oda(a, d):#a-last_letter(x) in future, b-p(x) in future
     txt = 'Буква, на которую оканчивается прошлый город не совпадает с первой буквой нового города'
-    if a.upper() != b[0].upper():
+    if a.upper() != d[0].upper():
         print(txt)
-        while a.upper() != b[0].upper():
+        while a.upper() != d[0].upper():
             b = input('Напишите город ')
-            if a.upper() != b[0].upper():
+            if a.upper() != d[0].upper():
                 print(txt)
-
 
 def game(c):
     a = 0 #flag dlya poverki kto hodit
+    b=[]
     while True:
         p1 = input('Напишите город ')
+        while b.count(p1.upper())>0:
+            print('Такой город уже есть')
+            p1 = input('Пишите новый ')
+        b.append(p1.upper())
         last_letter1 = p1[-1] 
         if last_letter1 == 'ь':
             last_letter1 = p1[-2]
@@ -38,6 +42,10 @@ def game(c):
         if last_letter1 == 'ь':
             last_letter1 = p1[-2]
         p2 = input('Напишите город ')
+        while b.count(p2.upper())>0:
+            print('Такой город уже есть')
+            p2 = input('Пишите новый ')
+        b.append(p2.upper())
         a += 1
         last_letter2 = p2[-1]
         if last_letter2 == 'ь':
@@ -48,7 +56,6 @@ def game(c):
         if last_letter2 == 'ь':
             last_letter2 = p2[-2]
 game(0)
-
 
 # Основной код работает, классно
 # Разберись с таймером
