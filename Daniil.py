@@ -1,5 +1,4 @@
-def start(lastletter, firstletter,counter):
-    counter=0
+def start(lastletter, firstletter):
     while True:
         temp = (input("Первый игрок, введите название города: "))
         check = cities_list.count(temp)
@@ -14,12 +13,12 @@ def start(lastletter, firstletter,counter):
     lastletter = temp[-1]
     lastletter.upper()
     #задаем последнюю букву
-    counter = counter+1
-    return(counter, lastletter)
+    return(lastletter)
 
 
-def game(counter, cities_list, city_play_lista,lastletter, firstletter):
+def game(cities_list, city_play_lista,lastletter, firstletter):
     bad_attemp=0
+    counter=1
     while True:
         temp = 0
         if bad_attemp == 2:
@@ -56,7 +55,6 @@ def game(counter, cities_list, city_play_lista,lastletter, firstletter):
     return(counter)
 
 
-counter=0
 print("включите русскую раскладку")
 cities_list = ["Москва", "Кострома", "Сочи","Челябинск","Иркутск", "Смоленск"]
 city_play_lista = []
