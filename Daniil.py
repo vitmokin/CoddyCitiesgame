@@ -63,7 +63,7 @@ firstletter = ""
 #вводим переменные и списки
 start(lastletter)
 #определяем стартовое слово
-game( cities_list, city_play_lista,lastletter,firstletter)
+counter=game( cities_list, city_play_lista,lastletter,firstletter)
 if counter % 2 == 0:
     print("первый игрок проиграл !")
 else:
