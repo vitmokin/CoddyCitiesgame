@@ -11,7 +11,7 @@ def start(lastletter):
     city_play_lista.insert(0, temp)
     #чтобы не было повторов
     lastletter = temp[-1]
-    lastletter.upper()
+    lastletter=lastletter.upper()
     #задаем последнюю букву
     return(lastletter)
 
@@ -33,12 +33,10 @@ def game(cities_list, city_play_lista,lastletter):
             check2 = city_play_lista.count(temp)
             #проверка 1 на существование города
             if check2 == 1:
-                print(lastletter)
-                print(firstletter)
                 #проверка 2 на повторение города
                 if lastletter == firstletter:
                     lastletter = temp[-1]
-                    lastletter.upper()
+                    lastletter=lastletter.upper()
                     counter = counter+1
                     #проверка 3 на последнюю букву
                 else:
