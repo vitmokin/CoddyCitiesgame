@@ -38,6 +38,7 @@ def game(cities_list, city_play_lista,lastletter):
                     lastletter = temp[-1]
                     lastletter=lastletter.upper()
                     counter = counter+1
+                    bad_attemp=0
                     #проверка 3 на последнюю букву
                 else:
                     print(
