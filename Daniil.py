@@ -11,11 +11,11 @@ def start(lastletter):
     city_play_lista.insert(0, temp)
     #чтобы не было повторов
     lastletter = temp[-1]
-    lastletter.capitalize()
+    lastletter.upper()
     #задаем последнюю букву
 
 
-def game(cities_list, city_play_lista,firstletter,lastletter):
+def game(cities_list, city_play_lista,lastletter):
     bad_attemp=0
     counter=1
     while True:
@@ -35,7 +35,7 @@ def game(cities_list, city_play_lista,firstletter,lastletter):
                 #проверка 2 на повторение города
                 if lastletter == firstletter:
                     lastletter = temp[-1]
-                    lastletter.capitalize()
+                    lastletter.upper()
                     counter = counter+1
                     #проверка 3 на последнюю букву
                 else:
@@ -55,14 +55,13 @@ def game(cities_list, city_play_lista,firstletter,lastletter):
 
 
 print("включите русскую раскладку")
-cities_list = ["Москва", "Кострома", "Сочи","Челябинск","Иркутск", "Смоленск"]
+cities_list = ["Москва", "Кострома", "Сочи","Челябинск","Иркутск", "Смоленск",]
 city_play_lista = []
 lastletter = ""
-firstletter = ""
 #вводим переменные и списки
 lastletter=start(lastletter)
 #определяем стартовое слово
-counter=game( cities_list, city_play_lista,lastletter,firstletter)
+counter=game( cities_list, city_play_lista,lastletter)
 if counter % 2 == 0:
     print("первый игрок проиграл !")
 else:
