@@ -57,7 +57,11 @@ def game(cities_list, city_play_lista,lastletter):
 
 
 print("включите русскую раскладку")
+<<<<<<< Updated upstream
 cities_list = ["Москва", "Кострома", "Сочи","Челябинск","Иркутск", "Смоленск",]
+=======
+cities_list = ["Москва", "Кострома", "Сочи","Челябинск","Иркутск", "Смоленск"]
+>>>>>>> Stashed changes
 city_play_lista = []
 lastletter = ""
 #вводим переменные и списки
